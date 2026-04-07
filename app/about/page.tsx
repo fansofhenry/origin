@@ -4,14 +4,14 @@ export default function About() {
       <div className="hero-label">Background</div>
       <h1
         style={{
-          fontSize: "2.5rem",
+          fontSize: "2.75rem",
           fontWeight: 800,
-          letterSpacing: "-0.04em",
-          marginBottom: "2rem",
-          lineHeight: 1.1,
+          letterSpacing: "-0.045em",
+          marginBottom: "2.5rem",
+          lineHeight: 1.05,
         }}
       >
-        About Me
+        About <span className="gradient-text">Me</span>
       </h1>
       <div className="about-section">
         <p>

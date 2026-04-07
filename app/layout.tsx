@@ -34,9 +34,10 @@ export default function RootLayout({
             position: "sticky",
             top: 0,
             zIndex: 50,
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            background: "color-mix(in srgb, var(--background) 85%, transparent)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            background:
+              "color-mix(in srgb, var(--background) 80%, transparent)",
             borderBottom: "1px solid var(--border)",
           }}
         >
@@ -45,7 +46,7 @@ export default function RootLayout({
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              padding: "0.875rem 2rem",
+              padding: "0.75rem 2rem",
               maxWidth: "1000px",
               margin: "0 auto",
             }}
@@ -54,8 +55,12 @@ export default function RootLayout({
               href="/"
               style={{
                 fontWeight: 800,
-                fontSize: "1rem",
+                fontSize: "0.95rem",
                 letterSpacing: "-0.04em",
+                background:
+                  "linear-gradient(135deg, #2563eb, #6366f1)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
               HF
@@ -90,16 +95,18 @@ export default function RootLayout({
         >
           {children}
         </main>
-        <footer
-          style={{
-            borderTop: "1px solid var(--border)",
-            padding: "2rem",
-            textAlign: "center",
-            fontSize: "0.8rem",
-            color: "var(--muted-light)",
-          }}
-        >
-          Henry Fan &copy; {new Date().getFullYear()}
+        <footer className="footer">
+          <span>Henry Fan &copy; {new Date().getFullYear()}</span>
+          <div className="footer-links">
+            <a
+              href="https://github.com/fansofhenry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              GitHub
+            </a>
+          </div>
         </footer>
       </body>
     </html>

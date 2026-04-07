@@ -22,11 +22,11 @@ export default function Blog() {
       <div className="hero-label">Writing</div>
       <h1
         style={{
-          fontSize: "2.5rem",
+          fontSize: "2.75rem",
           fontWeight: 800,
-          letterSpacing: "-0.04em",
-          marginBottom: "2rem",
-          lineHeight: 1.1,
+          letterSpacing: "-0.045em",
+          marginBottom: "2.5rem",
+          lineHeight: 1.05,
         }}
       >
         Blog
@@ -35,36 +35,10 @@ export default function Blog() {
         {posts.map((post) => (
           <div key={post.title} className="blog-item">
             <div>
-              <span
-                style={{
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  letterSpacing: "-0.01em",
-                  display: "block",
-                  marginBottom: "0.25rem",
-                }}
-              >
-                {post.title}
-              </span>
-              <span
-                style={{
-                  fontSize: "0.85rem",
-                  color: "var(--muted)",
-                }}
-              >
-                {post.description}
-              </span>
+              <span className="blog-title">{post.title}</span>
+              <span className="blog-desc">{post.description}</span>
             </div>
-            <span
-              style={{
-                fontSize: "0.75rem",
-                color: "var(--muted-light)",
-                whiteSpace: "nowrap",
-                fontWeight: 500,
-              }}
-            >
-              {post.date}
-            </span>
+            <span className="blog-date">{post.date}</span>
           </div>
         ))}
       </div>
